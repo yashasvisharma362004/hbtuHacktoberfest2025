@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.splash-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.main-content.visible {
+  opacity: 1;
+}
+
+.typing-indicator {
+  position: relative;
+  width: 60px;
+  height: 25px;
+}
+
+.typing-circle {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: typing-circle 0.5s alternate infinite ease;
+}
+
+@keyframes typing-circle {
+  0% { top: 20px; height: 5px; border-radius: 50px 50px 25px 25px; transform: scaleX(1.7); }
+  40% { height: 8px; border-radius: 50%; transform: scaleX(1); }
+  100% { top: 0%; }
+}
+
+.typing-circle:nth-child(2) { left: 45%; animation-delay: 0.2s; }
+.typing-circle:nth-child(3) { right: 15%; left: auto; animation-delay: 0.3s; }
+
+.typing-shadow {
+  width: 5px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  position: absolute;
+  top: 30px;
+  left: 15%;
+  filter: blur(1px);
+  animation: typing-shadow 0.5s alternate infinite ease;
+}
+
+@keyframes typing-shadow {
+  0% { transform: scaleX(1.5); }
+  40% { transform: scaleX(1); opacity: 0.7; }
+  100% { transform: scaleX(0.2); opacity: 0.4; }
+}
+
+.typing-shadow:nth-child(4) { left: 45%; animation-delay: 0.2s; }
+.typing-shadow:nth-child(5) { right: 15%; left: auto; animation-delay: 0.3s; }
+
+.loading-text {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.indicator {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.bg-green-500 { background-color: #22c55e; }
+.bg-yellow-400 { background-color: #facc15; }
+.bg-red-500 { background-color: #ef4444; }
+.bg-gray-400 { background-color: #9ca3af; }
+.bg-gray-300 { background-color: #d1d5db; }
