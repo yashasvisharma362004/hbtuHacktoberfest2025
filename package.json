@@ -1,1 +1,27 @@
-
+{
+  "name": "hbtu-hacktoberfest2025",
+  "version": "1.0.0",
+  "description": "Hacktoberfest 2025 project",
+  "main": "src/index.jsx",
+  "scripts": {
+    "dev": "vite --port=3001 --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "live-server": "^1.2.2",
+    "vite": "^4.5.3"
+  },
+  "keywords": [
+    "hacktoberfest",
+    "project"
+  ],
+  "author": "",
+  "license": "ISC"
+}
