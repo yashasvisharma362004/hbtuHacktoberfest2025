@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Pomodoro Timer</h1>
+
+    <section class="timer-card" aria-live="polite">
+      <div class="mode-tabs" role="tablist" aria-label="Timer modes">
+        <button id="mode-work" class="mode active" role="tab" aria-selected="true">Work</button>
+        <button id="mode-short" class="mode" role="tab" aria-selected="false">Short Break</button>
+        <button id="mode-long" class="mode" role="tab" aria-selected="false">Long Break</button>
+      </div>
+
+      <div class="ring-wrap">
+        <svg class="progress-ring" width="220" height="220">
+          <circle class="ring-bg" cx="110" cy="110" r="100" />
+          <circle class="ring" cx="110" cy="110" r="100" stroke-linecap="round" />
+        </svg>
+
+        <div class="timer-display" id="timeDisplay" role="timer" aria-atomic="true">25:00</div>
+      </div>
+
+      <div class="controls">
+        <button id="startPause" class="btn start">Start</button>
+        <button id="reset" class="btn">Reset</button>
+      </div>
+
+      <div class="cycle-info">
+        <span>Pomodoros Completed: <strong id="cycles">0</strong></span>
+      </div>
+    </section>
+
+    <section class="settings-card">
+      <h2>Settings</h2>
+      <form id="settingsForm">
+        <label>
+          Work (minutes)
+          <input type="number" id="workInput" min="1" max="180" value="25" />
+        </label>
+
+        <label>
+          Short Break (minutes)
+          <input type="number" id="shortInput" min="1" max="60" value="5" />
+        </label>
+
+        <label>
+          Long Break (minutes)
+          <input type="number" id="longInput" min="1" max="60" value="15" />
+        </label>
+
+        <label>
+          Rounds before long break
+          <input type="number" id="roundsInput" min="1" max="8" value="4" />
+        </label>
+
+        <div class="setting-actions">
+          <button type="button" id="saveSettings" class="btn">Save</button>
+          <button type="button" id="resetSettings" class="btn secondary">Reset Defaults</button>
+        </div>
+      </form>
+    </section>
+
+    <p class="hint">Keyboard: <kbd>Space</kbd> start/pause · <kbd>R</kbd> reset</p>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
