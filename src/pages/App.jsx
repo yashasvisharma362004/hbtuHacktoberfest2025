@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./NotFound";
 import FunFact from "../components/FunFact";
 import { FocusModeProvider, useFocusMode } from "../components/FocusModeContext";
-
 import Navbar from "../components/Navbar";
 import GreetingTimeWidget from '../components/GreetingTimeWidget';
+import ScrollToTopButton from "../scroll_to_top_component/ScrollToTopButton";
 
 function MainAppRoutes() {
   const { focusMode } = useFocusMode();
@@ -22,7 +21,7 @@ function MainAppRoutes() {
         <Route
           path="/"
           element={
-            <div className={focusMode ? 'focus-mode-main' : ''} style={{ textAlign: "center", marginTop: "2rem" }}>
+            <div className={focusMode ? 'focus-mode-main' : ''} style={{ textAlign: "center", marginTop: "2rem", paddingBottom: "4rem" }}>
               <h1>Welcome to HBTU Hacktoberfest!</h1>
               <GreetingTimeWidget />
               <FunFact />
@@ -32,6 +31,7 @@ function MainAppRoutes() {
         {/* 👇 Catch-all route */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ScrollToTopButton />
     </div>
   );
 }
@@ -45,4 +45,3 @@ function App() {
 }
 
 export default App;
-
