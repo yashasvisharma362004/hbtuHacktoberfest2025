@@ -36,12 +36,14 @@ Give this repo a shiny Star ⭐⭐⭐⭐🌟🌟✨
 We welcome all contributors! Follow these steps to get started:
 
 1. **Fork the Repository**  
-   Click the **Fork** button at the top-right of this repository to create your own copy.
+   Click the **Fork** button at the top-right of this repository to create your own copy. 🏴‍☠️
+
 
 2. **Clone Your Fork**  
    ```bash
    git clone https://github.com/your-username/hbtuHacktoberfest2025.git
-   cd hbtuHacktoberfest2025
+cd hbtuHacktoberfest2025
+
 
 3. **Explore Open Issues**
 - Check out issues labeled:
