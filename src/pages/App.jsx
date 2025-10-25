@@ -6,6 +6,7 @@ import { FocusModeProvider, useFocusMode } from "../components/FocusModeContext"
 import Navbar from "../components/Navbar";
 import GreetingTimeWidget from '../components/GreetingTimeWidget';
 import ScrollToTopButton from "../scroll_to_top_component/ScrollToTopButton";
+import HomeContent from '../components/HomeContent';
 
 function MainAppRoutes() {
   const { focusMode } = useFocusMode();
@@ -25,6 +26,8 @@ function MainAppRoutes() {
               <h1>Welcome to HBTU Hacktoberfest!</h1>
               <GreetingTimeWidget />
               <FunFact />
+              {/* Sample Home Page Content */}
+              <HomeContent />
             </div>
           }
         />
