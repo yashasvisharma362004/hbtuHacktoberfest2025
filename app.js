@@ -133,6 +133,8 @@ function addTodo(e) {
 
   const d = new Date();
   const createTime = d.getTime();
+  const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const day = dayNames[d.getDay()];
   const infoText = `The todo item was created at ${createTime}, ${day}`;
   const currentValue = htmlEncode(todoInput.value)?.trim() || "";
   const categoryValue = document.getElementById("categorySelect").value;
