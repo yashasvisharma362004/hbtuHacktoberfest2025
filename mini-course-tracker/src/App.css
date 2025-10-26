@@ -1,0 +1,75 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 50px;
+}
+
+.App {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #5a2ca0;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background: #5a2ca0;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #7341b4;
+}
+
+.course-card {
+  background: #f9f9ff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.course-card h3 {
+  margin: 0 0 10px;
+}
+
+.course-card p {
+  margin: 5px 0;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.empty {
+  color: #777;
+  font-style: italic;
+}
