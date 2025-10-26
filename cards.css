@@ -6,33 +6,32 @@
 
 body {
   font-family: 'Muli', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
   margin: 0;
+  padding: 0;
   background-color: #f6f7fb;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   display: flex;
-  width: 90vw;
+  flex-direction: column; 
+  width: 80vw;
+  padding: 20px 0;
 }
 
 .panel {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
+  height: 60vh; 
+  border-radius: 20px;
   color: #fff;
   cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
+  margin: 20px 0; 
   position: relative;
-  transition: flex 0.7s ease-in;
-  -webkit-transition: flex 0.7s ease-in;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .panel h3 {
@@ -41,28 +40,17 @@ body {
   bottom: 20px;
   left: 20px;
   margin: 0;
-  opacity: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  transition: opacity 0.3s ease-in 0.4s;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 .panel.active {
-  flex: 5;
-}
-
-.panel.active h3 {
-  opacity: 1;
+  transform: scale(1.05); /* zoom effect */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 2;
 }
 
 @media (max-width: 480px) {
   .container {
-    width: 100vw;
-  }
-
-  /* On small screens, hide all panels except the 4th and 5th */
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
+    width: 95vw;
   }
 }
-
